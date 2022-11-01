@@ -5,6 +5,8 @@ import {
   CpDailyAmountData,
 } from '../interface/CpDailyAmountResponse';
 
+import styles from '../styles/cp-daily-amount-table.module.scss';
+
 interface Props {
   from: Date;
   to: Date;
@@ -20,22 +22,39 @@ function format(date: Date): string {
   return dayjs(date).format('YYYY-MM-DD');
 }
 
-export const CpDailyAmountTable = (props: Props) => {
+export const CpDailyAmountTable = (props: Props): JSX.Element => {
   const url: string = createUrl(format(props.from), format(props.to));
   const { data, isLoading, isError } = useImmutable(url);
-  if (isLoading) return <div>Loading</div>;
-  if (isError) return <div>Error</div>;
+  if (isLoading) return <div className={styles.loading}></div>;
+  if (isError)
+    return (
+      <div>
+        <p className={styles.error}>エラーが発生しました。</p>
+      </div>
+    );
 
   const cpDailyAmountDatas = (data as CpDailyAmountResponse).cpDailyAmountDatas;
 
+  if (cpDailyAmountDatas.length === 0) {
+    return (
+      <>
+        <p className={styles.error}>
+          該当の期間に発行されたCPが見つかりません。
+        </p>
+      </>
+    );
+  }
+
   const dateRow: JSX.Element = (
     <tr>
-      <td></td>
+      <th>
+        <p>発行体名/日付</p>
+      </th>
       {cpDailyAmountDatas.map((cpDailyAmountData) => {
         return (
-          <td key={format(cpDailyAmountData.date)}>
+          <th key={format(cpDailyAmountData.date)}>
             {format(cpDailyAmountData.date)}
-          </td>
+          </th>
         );
       })}
     </tr>
@@ -55,20 +74,20 @@ export const CpDailyAmountTable = (props: Props) => {
 
     nameAndAmountRows.push(
       <tr key={i}>
-        <td>{name}</td>
+        <th title={name}>{name}</th>
         {amounts.map((amount, index) => {
-          return <td key={index}>{amount}</td>;
+          return <td key={index}>{amount.toLocaleString()}</td>;
         })}
       </tr>,
     );
   }
 
   return (
-    <div>
-      <table>
+    <>
+      <table className={styles.sticky_table}>
         <thead>{dateRow}</thead>
         <tbody>{nameAndAmountRows}</tbody>
       </table>
-    </div>
+    </>
   );
 };

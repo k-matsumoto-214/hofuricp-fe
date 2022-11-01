@@ -1,0 +1,39 @@
+.table_container {
+  padding: 0% 1rem;
+}
+
+.header {
+  position: fixed;
+  top: 35px;
+  left: 0px;
+  padding: 1rem 1rem;
+  display: flex;
+  z-index: 99;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(251, 251, 251);
+}
+
+.search_window {
+  display: flex;
+  p {
+    font-size: 0.8rem;
+    margin: 0px;
+  }
+}
+
+.search_block {
+  margin-left: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+  background-color: rgb(219, 228, 238);
+  border-color: rgb(223, 232, 232);
+  color: black;
+}
+
+.main {
+  margin-top: 100px;
+  padding: 0px 10px;
+}
