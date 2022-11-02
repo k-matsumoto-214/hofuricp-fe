@@ -5,7 +5,7 @@ const rewrites =
     ? [
         {
           source: '/api/:path*',
-          destination: 'https://hofuri.keisukematsumoto.com/:path*',
+          destination: 'http://localhost:8083/:path*',
         },
       ]
     : [];
