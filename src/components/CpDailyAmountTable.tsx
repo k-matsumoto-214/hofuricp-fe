@@ -12,7 +12,7 @@ interface Props {
   to: Date;
 }
 
-const apiPath: string = '/api/cp/amount';
+const apiPath: string = '/api/cp/amount/daily';
 
 function createUrl(from: string, to: string): string {
   return apiPath + '?from=' + from + '&to=' + to;
@@ -24,14 +24,15 @@ function format(date: Date): string {
 
 export const CpDailyAmountTable = (props: Props): JSX.Element => {
   const url: string = createUrl(format(props.from), format(props.to));
-  const { data, isLoading, isError } = useImmutable(url);
+  const { data, isLoading } = useImmutable(url);
   if (isLoading) return <div className={styles.loading}></div>;
-  if (isError)
+  if (data.status !== undefined) {
     return (
       <div>
         <p className={styles.error}>エラーが発生しました。</p>
       </div>
     );
+  }
 
   const cpDailyAmountDatas = (data as CpDailyAmountResponse).cpDailyAmountDatas;
 

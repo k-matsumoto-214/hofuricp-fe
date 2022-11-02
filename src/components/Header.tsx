@@ -17,26 +17,23 @@ const pages: Page[] = [
 ];
 
 export const Header = (props: Props): JSX.Element => {
+  const targetPage: Page | undefined = pages.find(
+    (page) => page.title === props.selected,
+  );
   return (
     <>
       <Head>
-        <title>
-          {pages.map((page) => {
-            if (page.title === props.selected) {
-              return page.label;
-            }
-          })}
-        </title>
+        <title>{targetPage?.label}</title>
       </Head>
       <header className={styles.header}>
         <ul>
           {pages.map((page) => {
             return page.title === props.selected ? (
-              <li className={styles.selected}>
+              <li className={styles.selected} key={page.title}>
                 <Link href={page.title}>{page.label}</Link>
               </li>
             ) : (
-              <li>
+              <li key={page.title}>
                 {' '}
                 <Link href={page.title}>{page.label}</Link>
               </li>
