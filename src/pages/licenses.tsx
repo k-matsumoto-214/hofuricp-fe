@@ -45,7 +45,7 @@ export default function Licenses(props: PageProps) {
         <div className={styles.main}>
           {props.licenses.map((license) => {
             return (
-              <>
+              <div key={license.name}>
                 <p className={styles.name}>{license.name}</p>
                 <div className={styles.link}>
                   <p>
@@ -55,7 +55,7 @@ export default function Licenses(props: PageProps) {
                     <Link href={license.licenseUrl}>{license.licenseUrl}</Link>
                   </p>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
