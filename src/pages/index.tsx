@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer';
 export default function Index() {
   return (
     <>
-      <div className={styles.wrapper}>
+      <div>
         <Header selected='/'></Header>
         <div className={styles.totalGraphContainer}>
           <p>日次発行残高(百万)</p>
