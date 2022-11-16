@@ -5,13 +5,13 @@
   background-color: rgb(1, 1, 1);
   color: white;
   width: 100%;
-  height: 35px;
+  height: 48px;
 
   ul {
     display: flex;
-    margin: 5px 0px;
 
     li {
+      font-size: smaller;
       padding-right: 30px;
       list-style-type: none;
     }

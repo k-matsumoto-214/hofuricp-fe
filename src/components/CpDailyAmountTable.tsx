@@ -48,9 +48,7 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
 
   const dateRow: JSX.Element = (
     <tr>
-      <th>
-        <p>発行体名/日付</p>
-      </th>
+      <th></th>
       {cpDailyAmountDatas.map((cpDailyAmountData) => {
         return (
           <th key={format(cpDailyAmountData.date)}>
@@ -84,11 +82,13 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
   }
 
   return (
-    <>
-      <table className={styles.sticky_table}>
-        <thead>{dateRow}</thead>
-        <tbody>{nameAndAmountRows}</tbody>
-      </table>
-    </>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <table className={styles.table}>
+          <thead>{dateRow}</thead>
+          <tbody>{nameAndAmountRows}</tbody>
+        </table>
+      </div>
+    </main>
   );
 };
