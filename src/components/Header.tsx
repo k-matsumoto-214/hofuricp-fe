@@ -26,7 +26,7 @@ export const Header = (props: Props): JSX.Element => {
         <title>CP残高情報あつめました</title>
         <meta
           name='description'
-          content='証券保管振替機構から日次発表されるCP発行残高を集計しているサイトです。日時の発行体別残高、全体の残高など確認できます。'
+          content='証券保管振替機構から日次発表されるCP発行残高を集計しているサイトです。日次の発行体別残高、全体の残高など確認できます。'
         />
         <link rel='icon' href='/favicon.ico' />
         <link
