@@ -1,0 +1,56 @@
+{
+    "chart.js": {
+        "licenses": "MIT",
+        "repository": "https://github.com/chartjs/Chart.js",
+        "licenseUrl": "https://github.com/chartjs/Chart.js/raw/master/LICENSE.md",
+        "parents": "hofuricp-fe"
+    },
+    "dayjs": {
+        "licenses": "MIT",
+        "repository": "https://github.com/iamkun/dayjs",
+        "licenseUrl": "https://github.com/iamkun/dayjs/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "next": {
+        "licenses": "MIT",
+        "repository": "https://github.com/vercel/next.js",
+        "licenseUrl": "https://github.com/vercel/next.js/raw/master/license.md",
+        "parents": "hofuricp-fe"
+    },
+    "react-chartjs-2": {
+        "licenses": "MIT",
+        "repository": "https://github.com/reactchartjs/react-chartjs-2",
+        "licenseUrl": "https://github.com/reactchartjs/react-chartjs-2/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "react-datepicker": {
+        "licenses": "MIT",
+        "repository": "https://github.com/Hacker0x01/react-datepicker",
+        "licenseUrl": "https://github.com/Hacker0x01/react-datepicker/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "react-dom": {
+        "licenses": "MIT",
+        "repository": "https://github.com/facebook/react",
+        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "react": {
+        "licenses": "MIT",
+        "repository": "https://github.com/facebook/react",
+        "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "sass": {
+        "licenses": "MIT",
+        "repository": "https://github.com/sass/dart-sass",
+        "licenseUrl": "https://github.com/sass/dart-sass/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
+    "swr": {
+        "licenses": "MIT",
+        "repository": "github:vercel/swr",
+        "licenseUrl": "github:vercel/swr",
+        "parents": "hofuricp-fe"
+    }
+}

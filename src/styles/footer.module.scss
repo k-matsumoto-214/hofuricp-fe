@@ -3,6 +3,25 @@
   background-color: #89c7de;
   color: #fff;
   text-align: center;
-  position: fixed;
+  position: absolute;
   bottom: 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 768px) {
+      margin: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0px;
+    }
+
+    li {
+      font-size: smaller;
+      padding-right: 30px;
+      list-style-type: none;
+    }
+  }
 }

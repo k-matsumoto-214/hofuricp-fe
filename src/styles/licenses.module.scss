@@ -1,0 +1,31 @@
+.main {
+  position: fixed;
+  top: 48px;
+  height: 85%;
+  overflow: auto;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.name {
+  margin: 2px 0px;
+  font-size: x-large;
+}
+
+.link {
+  p {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: smaller;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: medium;
+  }
+
+  p:last-child {
+    margin-bottom: 10px;
+  }
+  border-bottom-style: ridge;
+}
