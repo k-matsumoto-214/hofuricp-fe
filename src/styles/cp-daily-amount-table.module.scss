@@ -98,6 +98,15 @@
 
 .error {
   padding: 20px;
-  font-size: large;
   color: red;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 148px;
+    font-size: medium;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 118px;
+    font-size: large;
+  }
 }
