@@ -7,7 +7,7 @@ export const Footer = (): JSX.Element => {
       <footer className={styles.footer}>
         <ul>
           <li>
-            <Link href='/cp'>cp</Link>
+            <Link href='/licenses'>License</Link>
           </li>
         </ul>
       </footer>
