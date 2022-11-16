@@ -23,7 +23,7 @@ export const Header = (props: Props): JSX.Element => {
   return (
     <>
       <Head>
-        <title>{targetPage?.label}</title>
+        <title>CP残高情報あつめました</title>
       </Head>
       <header className={styles.header}>
         <ul>
