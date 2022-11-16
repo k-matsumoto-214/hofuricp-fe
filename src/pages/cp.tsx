@@ -18,7 +18,7 @@ export default function Cp() {
 
   return (
     <>
-      <div className={styles.wrapper}>
+      <div>
         <Header selected='/cp'></Header>
         <div className={styles.header}>
           <div className={styles.search_window}>
