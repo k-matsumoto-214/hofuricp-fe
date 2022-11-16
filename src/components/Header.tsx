@@ -24,6 +24,12 @@ export const Header = (props: Props): JSX.Element => {
     <>
       <Head>
         <title>CP残高情報あつめました</title>
+        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
+        />
       </Head>
       <header className={styles.header}>
         <ul>
