@@ -1,5 +1,7 @@
 # https://hofuri.keismats.com/
 ---
+※ 9/25 excelDL機能追加しました
+
 [ほふり（証券保管振替機構）](https://www.jasdec.com/description/cp/cpmei.html?hakkoushaMei=&isinCode=&boshuuKubun=&hoshouKubun=&s=true)に掲載されているCP発行残高情報を収集して
 閲覧できるWEBサイトです。
 
