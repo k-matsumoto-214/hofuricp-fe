@@ -34,9 +34,10 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
     );
   }
 
-  const cpDailyAmountDatas = (data as CpDailyAmountResponse).cpDailyAmountDatas;
+  const dates: Date[] = (data as CpDailyAmountResponse).dates;
+  const cpDailyAmountDatas: CpDailyAmountData[] = (data as CpDailyAmountResponse).cpDailyAmountDatas;
 
-  if (cpDailyAmountDatas.length === 0) {
+  if (dates.length === 0) {
     return (
       <>
         <p className={styles.error}>
@@ -49,37 +50,30 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
   const dateRow: JSX.Element = (
     <tr>
       <th></th>
-      {cpDailyAmountDatas.map((cpDailyAmountData) => {
+      {dates.map((date) => {
         return (
-          <th key={format(cpDailyAmountData.date)}>
-            {format(cpDailyAmountData.date)}
+          <th key={format(date)}>
+            {format(date)}
           </th>
         );
       })}
     </tr>
   );
 
-  const issuerNumber: number = cpDailyAmountDatas[0].cpAmountData.length;
-  const dateNumber: number = cpDailyAmountDatas.length;
   const nameAndAmountRows: JSX.Element[] = [];
 
-  for (let i: number = 0; i < issuerNumber; i++) {
-    const name: string = cpDailyAmountDatas[0].cpAmountData[i].name;
-    const amounts: number[] = [];
-    for (let j: number = 0; j < dateNumber; j++) {
-      const cpDailyAmountData: CpDailyAmountData = cpDailyAmountDatas[j];
-      amounts.push(cpDailyAmountData.cpAmountData[i].amount);
-    }
-
+  cpDailyAmountDatas.forEach((cpData, index) => {
+    console.log(cpData)
     nameAndAmountRows.push(
-      <tr key={i}>
-        <th title={name}>{name}</th>
-        {amounts.map((amount, index) => {
+      <tr key={cpData.issureName}>
+        <th title={cpData.issureName}>{cpData.issureName}</th>
+        {cpData.amounts.map((amount, index) => {
           return <td key={index}>{amount.toLocaleString()}</td>;
         })}
-      </tr>,
-    );
-  }
+      </tr>
+    )
+   }
+  );
 
   return (
     <main className={styles.main}>

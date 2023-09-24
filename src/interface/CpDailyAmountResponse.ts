@@ -1,13 +1,9 @@
-export interface CpAmount {
-  name: string;
-  amount: number;
-}
-
 export interface CpDailyAmountData {
-  date: Date;
-  cpAmountData: CpAmount[];
+  issureName: string;
+  amounts: number[];
 }
 
 export interface CpDailyAmountResponse {
+  dates: Date[];
   cpDailyAmountDatas: CpDailyAmountData[];
 }
