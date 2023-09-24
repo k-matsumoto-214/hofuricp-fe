@@ -11,6 +11,12 @@
         "licenseUrl": "https://github.com/iamkun/dayjs/raw/master/LICENSE",
         "parents": "hofuricp-fe"
     },
+    "exceljs": {
+        "licenses": "MIT",
+        "repository": "https://github.com/exceljs/exceljs",
+        "licenseUrl": "https://github.com/exceljs/exceljs/raw/master/LICENSE",
+        "parents": "hofuricp-fe"
+    },
     "next": {
         "licenses": "MIT",
         "repository": "https://github.com/vercel/next.js",

@@ -12,8 +12,8 @@ function formatDate(date: Date): string {
 }
 
 export default function Cp() {
-  // 半年前が初期値
-  const [from, setFrom] = useState(dayjs().subtract(6, 'month').toDate());
+  // 3ヶ月前が初期値
+  const [from, setFrom] = useState(dayjs().subtract(3, 'month').toDate());
   const [to, setTo] = useState(dayjs().toDate());
 
   return (
