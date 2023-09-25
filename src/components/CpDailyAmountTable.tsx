@@ -41,6 +41,8 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
 
   dates = (data as CpDailyAmountResponse).dates;
   cpDailyAmountDatas = (data as CpDailyAmountResponse).cpDailyAmountDatas;
+  dates = (data as CpDailyAmountResponse).dates;
+  cpDailyAmountDatas = (data as CpDailyAmountResponse).cpDailyAmountDatas;
 
   if (dates.length === 0) {
     return (
@@ -56,6 +58,7 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
     <tr>
       <th></th>
       {dates.map((date) => {
+        return <th key={format(date)}>{format(date)}</th>;
         return <th key={format(date)}>{format(date)}</th>;
       })}
     </tr>
@@ -122,6 +125,11 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
 
   return (
     <main className={styles.main}>
+      <div>
+        <button className={styles.excelButton} onClick={(e) => dlExcel(e)}>
+          エクセル DL
+        </button>
+      </div>
       <div>
         <button className={styles.excelButton} onClick={(e) => dlExcel(e)}>
           エクセル DL
