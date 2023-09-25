@@ -87,7 +87,7 @@ export const CpDailyAmountTable = (props: Props): JSX.Element => {
     // ヘッダ列を作成（日次がヘッダ, 先頭列は発行体名）
     const columns = [{ header: '発行体名', key: 'issureName', width: 60 }];
     dates.forEach((date) =>
-      columns.push({ header: format(date), key: format(date), width: 10 }),
+      columns.push({ header: format(date), key: format(date), width: 15 }),
     );
     worksheet.columns = columns;
 
