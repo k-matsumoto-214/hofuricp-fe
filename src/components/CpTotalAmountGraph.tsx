@@ -45,7 +45,7 @@ const options = {
 };
 
 const apiPath: string = '/api/cp/amount/total';
-const from: Date = dayjs().subtract(6, 'month').toDate();
+const from: Date = dayjs().subtract(12, 'month').toDate();
 const to: Date = dayjs().toDate();
 
 function createUrl(from: string, to: string): string {
